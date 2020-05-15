@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-4-2</title>
+    <script language="javascript">
+        function hide() {
+            document.getElementById("mydiv").style.display="none";
+        }
+        function show() {
+            document.getElementById("mydiv").style.display="";
+        }
+    </script>
+</head>
+<body>
+    <div id="mydiv">メッセージ</div>
+
+    <input type="button" value="非表示" onclick="hide();">
+    <input type="button" value="表示" onclick="show();">
+</body>
+</html>
