@@ -4,10 +4,12 @@
 決済ページ
 
 <?php
-    if ((!isset($_COOKIE["order"])) || ($_COOKIE["order"] == "")) {
+    session_start();
+
+    if ((!isset($_SESSION["order"])) || ($_SESSION["order"] == "")) {
         echo "商品が選択されていません";
     } else {
-        $ordervalue = $_COOKIE["order"];
+        $ordervalue = $_SESSION["order"];
         echo $ordervalue . "の購入手続きを進めます";
     }
 ?>

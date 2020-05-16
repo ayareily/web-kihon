@@ -2,11 +2,12 @@
 <body>
     
 <?php
+    session_start();
     if (!isset($_POST["order"])) {
-        setcookie("order", "", time() - 3600);
+        unset($_SESSION["order"]);
     } else {
         $ordervalue = $_POST["order"];
-        setcookie("order", $ordervalue);
+        $_SESSION["order"] = $ordervalue;
     }
 ?>
 商品を設定しました。<br>
